@@ -1,5 +1,6 @@
-export default function page () {
+const page = () => {
   return (
-    <div>twitter clone</div>
+    <div>page</div>
   )
 }
+export default page;
