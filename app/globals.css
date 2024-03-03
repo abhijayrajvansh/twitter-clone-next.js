@@ -4,12 +4,24 @@
 
 @layer base {
   body {
-    @apply w-full h-full bg-black text-white flex justify-center items-center relative 
+    @apply w-full h-full bg-black text-white flex justify-center items-center  
   }
 }
 
 @layer components {
+  .b1 {
+    @apply border-2 border-red-500
+  }
+  .b2 {
+    @apply border-2 border-green-500
+  }
+  .b3 {
+    @apply border-2 border-yellow-500
+  }
+  .b4 {
+    @apply border-2 border-blue-500
+  }
   .layoutContainer {
-    @apply max-w-screen-xl w-full h-full flex relative space-x-3
+    @apply max-w-screen-xl w-full h-full flex space-x-3
   }
 }
