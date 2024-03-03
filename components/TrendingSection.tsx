@@ -8,7 +8,7 @@ const TrendingSection = () => {
   const [isInputFocused, setIsInputFocused] = useState(false);
 
   return (
-    <section className="flex flex-col fixed ml-[900px] w-full max-w-[375px] px-5 py-1">
+    <section className="flex flex-col fixed ml-[900px] w-full max-w-[375px] px-4 py-1">
       
       <div className="flex w-full items-center relative focus-within:text-primary">
         <IoSearch className={`text-xl ${isInputFocused ? 'text-primary' : 'text-faded'} absolute left-5`} />
@@ -21,8 +21,13 @@ const TrendingSection = () => {
       </div>
       
       
-      <div className="mt-3">subscribe to premium</div>
-      <div>what's happening</div>
+      <div className="mt-3 bg-[#16181C] px-4 py-3 rounded-2xl">
+        <h2>Subscribe to Premium</h2>
+        <p className="text-sm py-2">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
+        <button className="font-bold bg-primary hover:bg-opacity-80 px-4 py-1.5 mt-1.5 rounded-full">Subscribe</button>
+      </div>
+
+      <div className="mt-3">what's happening</div>
       <div>who to follow</div>
       <p>important links</p>
     </section>

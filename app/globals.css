@@ -6,6 +6,9 @@
   body {
     @apply w-full h-full bg-black text-white flex justify-center items-center
   }
+  h2 {
+    @apply font-bold text-xl
+  }
 }
 
 @layer components {
