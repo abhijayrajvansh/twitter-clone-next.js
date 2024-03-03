@@ -1,4 +1,4 @@
-// navigation bar imports
+// navigationBar imports
 import Link from "next/link";
 import { FaRegUser, FaHouse,FaXTwitter } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
@@ -51,8 +51,8 @@ const NavigationBar = () => {
         {
           NAVIGATION_ITEMS.map(item => (
             <Link key={item.title} href={`/${item.title.toLowerCase()}`}>
-                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-3 m-1  transition duration-200 w-fit gap-5 pr-6">
-                  <item.icon className="text-[28px] h-7" /> 
+                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-3 transition duration-200 w-fit gap-5 pr-6">
+                  <item.icon className="text-[29px] h-7 w-7" /> 
                   {item.title !== 'home' && <div className="text-xl">{item.title}</div>}
                 </div>
             </Link>
