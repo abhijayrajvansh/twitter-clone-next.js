@@ -46,7 +46,7 @@ const NAVIGATION_ITEMS = [
 
 const NavigationBar = () => {
   return (
-  <section className="fixed w-[275px] h-screen flex flex-col justify-between">
+  <section className="fixed w-[260px] h-screen flex flex-col justify-between px-2">
       <div className="flex flex-col">
         {
           NAVIGATION_ITEMS.map(item => (
@@ -58,7 +58,7 @@ const NavigationBar = () => {
             </Link>
           ))
         }
-        <button className="bg-primary hover:bg-opacity-80 transition duration-200 rounded-full text-lg font-medium p-3 m-4">
+        <button className="bg-primary hover:bg-opacity-80 transition duration-200 rounded-full text-lg font-medium px-3 py-3 mt-5">
           Post
         </button>
       </div>
