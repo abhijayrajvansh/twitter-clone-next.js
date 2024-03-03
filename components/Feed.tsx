@@ -9,7 +9,7 @@ const Feed = () => {
   return (
     <main className="ml-[275px] flex flex-col w-[620px] h-full min-h-screen border-gray-700 border-l border-r">
       {/* view tab */}
-      <div className="bg-black text-center font-bold border-gray-700 border-b border-l border-r pt-4 pb-2 fixed w-[620px]">Following
+      <div className="backdrop-blur-xl bg-black bg-opacity-70 text-center font-bold border-gray-700 border-b border-l border-r pt-4 pb-2 fixed w-[620px]">Following
         <div className="border-primary border-2 w-[14%] ml-[43%] rounded-full mt-2"></div>
       </div>
       {/* margin divider */}
@@ -27,7 +27,7 @@ const Feed = () => {
 
       {/* tweet post section */}
       {
-        Array.from({length: 1}).map((_, i) => (  
+        Array.from({length: 5}).map((_, i) => (  
           <div key={i}>
           
             <div className="flex items-start h-full w-full p-4 space-x-2 border-gray-700 border-b">
