@@ -2,6 +2,7 @@
 
 import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
+import HappeningTab from "./HappeningTab";
 
 const TrendingSection = () => {
 
@@ -19,17 +20,18 @@ const TrendingSection = () => {
           onFocus={() => setIsInputFocused(true)} 
           onBlur={() => setIsInputFocused(false)}/>
       </div>
-      
-      
-      <div className="mt-3 bg-[#16181C] px-4 py-3 rounded-2xl">
+
+      <div className="mt-4 bg-[#16181C] px-4 py-3 rounded-2xl">
         <h2>Subscribe to Premium</h2>
         <p className="text-sm py-2">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
         <button className="font-bold bg-primary hover:bg-opacity-80 px-4 py-1.5 mt-1.5 rounded-full">Subscribe</button>
       </div>
 
-      <div className="mt-3">what's happening</div>
+      
+
+      <HappeningTab genre="Technology" headline="rajvanshtechnologies" posts="21M"/>
+
       <div>who to follow</div>
-      <p>important links</p>
     </section>
   )
 }
