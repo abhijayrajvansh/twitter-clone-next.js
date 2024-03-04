@@ -13,6 +13,7 @@ const SearchComponent = () => {
           <IoSearch className={`text-xl ${isInputFocused ? 'text-primary' : 'text-faded'} absolute left-5`} />
           <input className={`text-md py-2.5 px-14 w-full rounded-full ${isInputFocused ? 'bg-black border border-primary outline-none':'bg-[#222529]'}`}
             placeholder="Search" 
+            
             // onFocus: This event handler is triggered when an element gains focus, meaning when a user clicks or tabs into the element.
             // onBlur: This event handler is triggered when an element loses focus, meaning when a user clicks or tabs out of the element.
             onFocus={() => setIsInputFocused(true)} 

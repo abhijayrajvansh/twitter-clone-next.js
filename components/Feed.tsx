@@ -10,44 +10,32 @@ import { LuShare } from "react-icons/lu";
 const Feed = () => {
   return (
     <main className="ml-[275px] flex flex-col w-[621px] h-full min-h-screen border-gray-700 border-l border-r">
-      {/* view tab */}
-      <div className="backdrop-blur-xl bg-black bg-opacity-70 text-center font-bold border-gray-700 border-b border-l border-r pt-2 pb-2 fixed w-[620px] z-10">
-        Following
+      <div className="backdrop-blur-xl bg-black bg-opacity-70 text-center font-bold border-gray-700 border-b border-l border-r pt-2 pb-2 fixed w-[620px] z-10">Following
         <div className="border-primary border-2 w-[14%] ml-[43%] rounded-full mt-2"></div>
       </div>
-      
       <Post />
-
-      {/* main timeline */}
       {
-        Array.from({length:1}).map((_, i) => (  
+        Array.from({length:21}).map((_, i) => (  
           <div key={i}>
-          
             <div className="flex items-start h-full w-[620px] px-4 pt-7 space-x-2 border-gray-700 border-b gap-2">
-
-
               <img className="h-10 w-10 rounded-full" src="./images/elonpfp.png" alt="profilePfp" />
               <div className="flex flex-col">
-                
                 <div className="flex items-center justify-between">
                   <div className="flex space-x-2 items-center relative">
-                    
-                    
+                    {/* retweet */}
                     {true &&
-                      <p className='flex items-center justify-between w-fit absolute bottom-6 text-faded font-bold -ml-6 gap-3'>
+                      <p className='flex items-center justify-between w-fit absolute bottom-6 text-faded font-medium -ml-6 gap-3'>
                       <FaRetweet /> Elon Musk reposted
                     </p>}
-
                     <p className="font-bold ml-2">Elon Musk</p>
                     <RiVerifiedBadgeFill className="text-primary text-lg"/>
                     <p className="text-faded">@elonmusk · Mar 4</p>
                   </div>
                   <MdMoreHoriz className="text-2xl text-faded" />
                 </div>
-                
                 <p className='ml-2'>let him cook, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequuntur minus qui officia blanditiis ipsam illo nisi esse.</p>
-                
-                {true && 
+                {/* image in post/tweet */}
+                {null && 
                 <img className="rounded-2xl mt-3  border-2 border-gray-700" src="./images/elonpfp.png" alt="tweetImage" />}
                 
                 <div className="flex item justify-between py-1 text-md text-faded">
@@ -69,11 +57,9 @@ const Feed = () => {
                 </div>
               </div>
             </div>
-          
           </div>
         ))
       }
-
     </main>
   )
 }
