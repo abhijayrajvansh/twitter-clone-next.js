@@ -51,8 +51,8 @@ const NavigationBar = () => {
         {
           NAVIGATION_ITEMS.map(item => (
             <Link key={item.title} href={`/${item.title.toLowerCase()}`}>
-                <div className="flex items-center hover:bg-white/5 rounded-full px-4 py-3 transition duration-200 w-fit gap-5 pr-6">
-                  <item.icon className="text-[29px] h-6 w-6" /> 
+                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-3 transition duration-200 w-fit gap-5 pr-6 mb-2">
+                  <item.icon className="text-[29px] h-7 w-7" /> 
                   {item.title !== 'home' && <div className="text-xl">{item.title}</div>}
                 </div>
             </Link>
@@ -63,7 +63,7 @@ const NavigationBar = () => {
         </button>
       </div>
 
-      <div className="flex justify-between items-center px-4 py-3 cursor-pointer hover:bg-white/5 rounded-full mb-3">
+      <div className="flex justify-between items-center px-4 py-3 cursor-pointer hover:bg-white/10 rounded-full mb-3">
         <div className="flex gap-3">
           <img src="./images/elonpfp.png" alt="userpp" 
             className="h-12 rounded-full" />

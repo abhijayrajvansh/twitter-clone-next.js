@@ -1,5 +1,3 @@
-'use client'
-
 import HappeningComponent from "./HappeningComponent";
 import Suggestions from "./Suggestions";
 import SearchComponent from "./SearchComponent";
@@ -11,7 +9,7 @@ const TrendingSection = () => {
   return (
     <>
     <SearchComponent />
-    <section className="flex flex-col absolute ml-[900px] w-full max-w-[380px] px-4 top-12">
+    <section className="flex flex-col mt-12 w-[380px] h-full px-4 sticky -top-[300px]">
       <SubscriptionCard />
 
       <div className="mt-4 bg-[#16181C] pt-3 rounded-2xl">
