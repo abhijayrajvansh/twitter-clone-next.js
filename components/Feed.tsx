@@ -1,34 +1,22 @@
-// feed imports
-import { GrGallery } from "react-icons/gr";
-import { MdOutlineGifBox } from "react-icons/md";
-import { CgOptions } from "react-icons/cg";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { MdMoreHoriz } from "react-icons/md";
+import Post from './Post';
 
 const Feed = () => {
   return (
     <main className="ml-[275px] flex flex-col w-[620px] h-full min-h-screen border-gray-700 border-l border-r">
       {/* view tab */}
-      <div className="backdrop-blur-xl bg-black bg-opacity-70 text-center font-bold border-gray-700 border-b border-l border-r pt-4 pb-2 fixed w-[620px]">Following
+      <div className="backdrop-blur-xl bg-black bg-opacity-70 text-center font-bold border-gray-700 border-b border-l border-r pt-2 pb-2 fixed w-[620px]">
+        Following
         <div className="border-primary border-2 w-[14%] ml-[43%] rounded-full mt-2">
         </div>
       </div>
-      {/* margin divider */}
-      <div className="mt-[60px]"></div>
       
-      <div className="flex items-center space-x-4 p-3 h-full w-full border-gray-700 border-b">
-        <img className="h-10 rounded-full" src="./images/elonpfp.png" alt="userpp" />
-        <input className="bg-transparent border-2 border-gray-700 rounded-full w-full px-3 py-2" type="text" placeholder="what is happening?!"/>
-        <div className="text-xl flex space-x-4 text-primary">
-          <GrGallery />
-          <MdOutlineGifBox />
-          <CgOptions />
-        </div>
-      </div>
+      <Post />
 
-      {/* tweet post section */}
+      {/* main timeline */}
       {
-        Array.from({length: 0}).map((_, i) => (  
+        Array.from({length: 5}).map((_, i) => (  
           <div key={i}>
           
             <div className="flex items-start h-full w-full p-4 space-x-2 border-gray-700 border-b">
