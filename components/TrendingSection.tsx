@@ -2,7 +2,9 @@
 
 import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
-import HappeningTab from "./HappeningTab";
+import HappeningComponent from "./HappeningComponent";
+import { MdMoreHoriz } from "react-icons/md";
+import Suggestions from "./Suggestions";
 
 const TrendingSection = () => {
 
@@ -28,10 +30,38 @@ const TrendingSection = () => {
       </div>
 
       
+      <div className="mt-4 bg-[#16181C] pt-3 rounded-2xl">
 
-      <HappeningTab genre="Technology" headline="rajvanshtechnologies" posts="21M"/>
+        <h2 className="px-4">What's happening</h2>
+        <div className="hover:bg-white/10 transition duration-200 px-4 flex w-full items-start justify-between py-5">
+          <div>
+            <p className="font-bold text-md">Best software company, SF</p>
+            <p className="text-sm text-faded">Technology · LIVE</p>
+          </div>
+          <img className="h-16 rounded-xl" src="./images/rajvansh.png" alt="rajvansh" />
+        </div>
+          
+        <HappeningComponent genre="Technology" headline="rajvanshtechnologies" posts="21M"/>
+        <HappeningComponent genre="Entertainment" headline="#spiderman" posts="255k"/>
+        <HappeningComponent genre="Technology" headline="bitcoin" posts="4M"/>
 
-      <div>who to follow</div>
+        <p className="px-4 py-3 text-primary cursor-pointer hover:bg-white/5 transition duration-200 rounded-b-2xl">see more</p>
+      </div>
+
+      
+
+      <div className="mt-4 bg-[#16181C] pt-3 rounded-2xl">
+        <h2 className="px-4">Who to follow</h2>
+
+        <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
+
+        {/* to create diffrenet user profile? */}
+        <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
+
+        <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
+
+        <p className="px-4 py-3 text-primary cursor-pointer hover:bg-white/5 transition duration-200 rounded-b-2xl">see more</p>
+      </div>
     </section>
   )
 }
