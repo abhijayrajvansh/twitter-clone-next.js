@@ -1,12 +1,16 @@
 // navigationBar imports
+
 import Link from "next/link";
-import { FaRegUser, FaHouse,FaXTwitter } from "react-icons/fa6";
+import { FaHouse,FaXTwitter } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import { CgMoreO } from "react-icons/cg";
 import { PiBell } from "react-icons/pi";
-import { SlEnvolope } from "react-icons/sl";
-import { FaRegBookmark } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+import { GoBookmark } from "react-icons/go";
 import { MdMoreHoriz } from "react-icons/md";
+import { LuSquareSlash } from "react-icons/lu";
+import { RiFileListLine } from "react-icons/ri";
+import { CiUser } from "react-icons/ci";
 
 
 const NAVIGATION_ITEMS = [
@@ -28,15 +32,23 @@ const NAVIGATION_ITEMS = [
   },
   {
     title: "Messages",
-    icon: SlEnvolope
+    icon: CiMail
+  },
+  {
+    title: "Grok",
+    icon: LuSquareSlash
+  },
+  {
+    title: "Lists",
+    icon: RiFileListLine
   },
   {
     title: "Bookmarks",
-    icon: FaRegBookmark
+    icon: GoBookmark
   },
   {
     title: "Profile",
-    icon: FaRegUser
+    icon: CiUser
   },
   {
     title: "More",
@@ -51,9 +63,9 @@ const NavigationBar = () => {
         {
           NAVIGATION_ITEMS.map(item => (
             <Link key={item.title} href={`/${item.title.toLowerCase()}`}>
-                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-3 transition duration-200 w-fit gap-5 pr-6 mb-2">
+                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-2 transition duration-200 w-fit gap-5 pr-6 mb-2">
                   <item.icon className="text-[29px] h-7 w-7" /> 
-                  {item.title !== 'home' && <div className="text-xl">{item.title}</div>}
+                  {item.title !== 'home' && <div className="text-lg">{item.title}</div>}
                 </div>
             </Link>
           ))
