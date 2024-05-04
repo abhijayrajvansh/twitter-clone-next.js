@@ -6,7 +6,9 @@ const page = () => {
   return (
     <div className="layoutContainer">
       <NavigationBar />
+
       <Feed />
+
       <TrendingSection />
     </div>
   )

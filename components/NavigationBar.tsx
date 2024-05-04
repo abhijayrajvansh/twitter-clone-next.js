@@ -57,7 +57,7 @@ const NAVIGATION_ITEMS = [
 
 const NavigationBar = () => {
   return (
-  <section className="fixed w-[260px] h-screen flex flex-col justify-between px-4">
+  <section className="fixed w-[275px] h-screen flex flex-col justify-between px-4 border-r border-gray-700">
       <div className="flex flex-col">
         
         {

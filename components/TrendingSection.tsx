@@ -1,18 +1,17 @@
 import HappeningComponent from "./HappeningComponent";
 import Suggestions from "./Suggestions";
-import SearchComponent from "./SearchComponent";
 import SubscriptionCard from "./SubscriptionCard";
 import Copyright from "./Copyright";
+import SearchComponent from "./SearchComponent";
 
 const TrendingSection = () => {
 
   return (
-    <>
-    <SearchComponent />
-    <section className="flex flex-col mt-12 w-[380px] h-full px-4 sticky -top-[300px]">
+    <section className="flex flex-col w-[385px] h-full px-4 -top-[300px] border-l border-gray-700">
+      <SearchComponent />
       <SubscriptionCard />
 
-      <div className="mt-4 bg-[#16181C] pt-3 rounded-2xl">
+      <div className="mt-4 bg-black border border-gray-700 pt-3 rounded-2xl">
         <h2 className="px-4">What's happening</h2>
         <div className="hover:bg-white/10 transition duration-200 px-4 flex w-full items-start justify-between py-5">
           <div>
@@ -27,18 +26,11 @@ const TrendingSection = () => {
         <p className="px-4 py-3 text-primary cursor-pointer hover:bg-white/5 transition duration-200 rounded-b-2xl">see more</p>
       </div>
 
-      <div className="mt-4 bg-[#16181C] pt-3 rounded-2xl">
-        <h2 className="px-4">Who to follow</h2>
-        <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
-        <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
-        <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
-        <p className="px-4 py-3 text-primary cursor-pointer hover:bg-white/5 transition duration-200 rounded-b-2xl">see more</p>
-      </div>
+      <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
 
       <Copyright /> 
 
     </section>
-    </>
   )
 }
 
