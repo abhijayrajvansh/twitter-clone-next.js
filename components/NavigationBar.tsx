@@ -10,6 +10,7 @@ import { GoBookmark } from "react-icons/go";
 import { LuSquareSlash } from "react-icons/lu";
 import { RiFileListLine } from "react-icons/ri";
 import { CiUser } from "react-icons/ci";
+import TweetBtn from '@/components/TweetBtn';
 import Profile from "./Profile";
 
 const NAVIGATION_ITEMS = [
@@ -57,25 +58,28 @@ const NAVIGATION_ITEMS = [
 
 const NavigationBar = () => {
   return (
-  <section className="fixed w-[275px] h-screen flex flex-col justify-between px-4 border-r border-gray-700">
+  <section className="fixed w-[100px] lg:w-[275px] h-screen flex flex-col justify-between px-4 border-r border-gray-700">
       <div className="flex flex-col">
         
         {
           NAVIGATION_ITEMS.map(item => (
             <Link key={item.title} href={`${item.title === 'Home' ? '/': item.title.toLowerCase()}`}>
-                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-2 transition duration-200 w-fit gap-5 pr-6 mb-2">
+                <div className="flex items-center hover:bg-white/10 rounded-full px-4 py-2 transition duration-200 w-fit gap-5 mb-2">
                   <item.icon className="text-[29px] h-7 w-7" /> 
                   
-                  <div className="text-lg">{item.title}</div>
+                  <div className="text-lg hidden lg:block">{item.title}</div>
 
                 </div>
             </Link>
           ))
         }
         
-        <button className="bg-primary hover:bg-opacity-80 transition duration-200 rounded-full text-lg font-medium px-3 py-3 mt-5">
-          Post
-        </button>
+        <div>
+          <button className="bg-primary hover:bg-opacity-80 lg:w-full transition duration-200 rounded-full text-lg font-medium px-4 py-3 mt-5">
+            <div className="lg:hidden"><TweetBtn /></div>
+            <p className="hidden lg:block">Post</p>
+          </button>
+        </div>
       </div>
 
       <Profile />

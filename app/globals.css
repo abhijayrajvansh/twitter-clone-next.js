@@ -13,7 +13,7 @@
 
 @layer components {
   .layoutContainer {
-    @apply max-w-screen-xl w-full h-full flex relative
+    @apply max-w-screen-md lg:max-w-screen-xl w-full h-full flex relative
   }
   .interactiveButton {
     @apply cursor-pointer p-2 rounded-full transition duration-300

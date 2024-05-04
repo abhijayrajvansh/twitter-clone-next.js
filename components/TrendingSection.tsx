@@ -7,7 +7,7 @@ import SearchComponent from "./SearchComponent";
 const TrendingSection = () => {
 
   return (
-    <section className="flex flex-col w-[385px] h-full px-4 -top-[300px] border-l border-gray-700">
+    <section className="hidden lg:flex flex-col w-[385px] h-full px-4 -top-[300px] border-l border-gray-700">
       <SearchComponent />
       <SubscriptionCard />
 

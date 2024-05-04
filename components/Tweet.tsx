@@ -5,7 +5,7 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 
 const Tweet = () => {
   return (
-    <div className="flex items-start h-full w-[620px] px-4 pt-4 space-x-2 border-gray-700 border-b gap-2">
+    <div className="flex items-start h-full w-[621px] px-4 pt-2 space-x-2 border-gray-700 border-b gap-2 border-r">
       <img className="h-10 w-10 rounded-full" src="./images/elonpfp.png" alt="profilePfp" />
       <div className="flex flex-col">
         <div className="flex items-center justify-between">
@@ -21,7 +21,7 @@ const Tweet = () => {
           let him cook, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequuntur minus qui officia blanditiis ipsam illo nisi esse.
         </p>
         
-        <div className="flex item justify-between text-md py-2 text-faded">
+        <div className="flex item justify-between text-md py-1 text-faded">
           <div className="interactiveButton hover:text-primary hover:bg-primary/20">
             <FaRegComment />
           </div>
