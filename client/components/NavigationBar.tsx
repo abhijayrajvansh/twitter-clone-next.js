@@ -1,6 +1,7 @@
-// navigationBar imports
 
 import Link from "next/link";
+import TweetBtn from '@/components/TweetBtn';
+import Profile from "./Profile";
 import { FaHouse,FaXTwitter } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import { CgMoreO } from "react-icons/cg";
@@ -10,8 +11,7 @@ import { GoBookmark } from "react-icons/go";
 import { LuSquareSlash } from "react-icons/lu";
 import { RiFileListLine } from "react-icons/ri";
 import { CiUser } from "react-icons/ci";
-import TweetBtn from '@/components/TweetBtn';
-import Profile from "./Profile";
+import { IoPeopleOutline } from "react-icons/io5";
 
 const NAVIGATION_ITEMS = [
   {
@@ -45,6 +45,14 @@ const NAVIGATION_ITEMS = [
   {
     title: "Bookmarks",
     icon: GoBookmark
+  },
+  {
+    title: "Communities",
+    icon: IoPeopleOutline
+  },
+  {
+    title: "Premium",
+    icon: FaXTwitter
   },
   {
     title: "Profile",
