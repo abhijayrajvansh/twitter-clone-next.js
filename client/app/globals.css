@@ -16,7 +16,7 @@
     @apply max-w-screen-md lg:max-w-screen-xl w-full h-full flex relative
   }
   .interactiveButton {
-    @apply cursor-pointer p-2 rounded-full transition duration-300
+    @apply cursor-pointer p-2 rounded-full
   }
 }
 
