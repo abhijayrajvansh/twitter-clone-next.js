@@ -7,10 +7,10 @@ export default function Copyright () {
       <Link href='https://abhijayrajvansh.com' target="_blank" rel="noopener noreferrer">
         <p className="font-medium flex items-center gap-2 ">
           <TfiWorld className="text-lg text-faded" />
-          <span className="hover:text-sky-500 hover:underline underline-offset-4 transition">Abhijay Rajvansh</span>
+          <span className="text-sm hover:text-sky-500 hover:underline underline-offset-4 transition">Abhijay Rajvansh</span>
         </p>
       </Link>
-      <Link href={`https://github.com/abhijayrajvansh/twitter-clone-next.js`} target="_blank" rel="noopener noreferrer">, view source code.
+      <Link className="text-sm" href={`https://github.com/abhijayrajvansh/twitter-clone-next.js`} target="_blank" rel="noopener noreferrer">, view source code.
       </Link>
     </section>
   )
