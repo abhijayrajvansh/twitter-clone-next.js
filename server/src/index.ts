@@ -1,4 +1,4 @@
-import { initGraphqlServer } from './server';
+import { initGraphqlServer } from './app/server';
 
 const PORT = process.env.PORT ?? 8080;
 

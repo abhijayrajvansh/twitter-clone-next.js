@@ -20,9 +20,7 @@ export async function initGraphqlServer() {
   });
 
   await graphqlServer.start();
-
   app.use('/graphql', expressMiddleware(graphqlServer))
   
   return app;
 }
-
