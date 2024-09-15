@@ -9,7 +9,9 @@ const GoogleSignIn = () => {
   }, [])
 
 
-  return <GoogleLogin onSuccess={(cred) => console.log(cred)} />;
+  return <div className="w-full flex justify-center bg-white rounded-md">
+    <GoogleLogin onSuccess={(cred) => console.log(cred)} />
+  </div>;
 };
 
 export default GoogleSignIn;
