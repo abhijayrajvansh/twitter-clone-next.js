@@ -9,13 +9,9 @@ const Feed = () => {
         <div className="border-primary border-2 w-[14%] ml-[43%] rounded-full mt-2"></div>
       </div>
 
-        <Post />
+      <Post />
 
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
+      <Tweet />
 
     </main>
   )

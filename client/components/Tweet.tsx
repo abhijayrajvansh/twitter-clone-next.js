@@ -6,34 +6,30 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 
 const Tweet = () => {
   return (
-    <div className="flex flex-col items-start h-full w-[621px] px-4 pt-1 border-gray-700 border-b gap-2 border-r">
-
-      <p className="text-sm ml-9 text-gray-500 font-semibold flex items-center gap-2">
-        <FaRetweet /> username reposted
-      </p>
+    <div className="flex flex-col items-start h-full w-[621px] px-4 pt-3 border-gray-700 border-b gap-2 border-r">
 
       <div className="flex w-full gap-2">
         <Image height={40} width={40} 
           className="h-10 w-10 rounded-full" 
-          src="/images/elonpfp.png" 
+          src="/images/sample-pfp.jpeg" 
           alt="profilePfp" 
         />
 
         <div className="flex flex-col w-full">
           <div className="flex items-center justify-between w-full">
-            <div className="flex space-x-2 items-center relative">
+            <div className="flex space-x-1 items-center relative">
               
-              <p className="font-bold ml-2">Elon Musk</p>
+              <p className="font-bold ml-2 text-sm">abhijay</p>
                 
-                <RiVerifiedBadgeFill className="text-primary text-lg"/>
+              <RiVerifiedBadgeFill className="text-primary text-lg"/>
               
-              <p className="text-faded">@elonmusk · Mar 4</p>
+              <p className="text-faded text-sm">@rajvanshx · Sep 15</p>
 
             </div>
             <MdMoreHoriz className="text-2xl text-faded" />
           </div>
 
-          <p className='ml-2'>
+          <p className='ml-2 text-sm'>
             let him cook, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequuntur minus qui officia blanditiis ipsam illo nisi esse.
           </p>
           

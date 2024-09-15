@@ -1,6 +1,6 @@
 import HappeningComponent from "./HappeningComponent";
 import Suggestions from "./Suggestions";
-import SubscriptionCard from "./SubscriptionCard";
+import SignUpCard from "./SignUpCard";
 import Copyright from "./Copyright";
 import SearchComponent from "./SearchComponent";
 
@@ -9,7 +9,7 @@ const TrendingSection = () => {
   return (
     <section className="hidden lg:flex flex-col w-[385px] h-full px-4 -top-[300px] border-l border-gray-700">
       <SearchComponent />
-      <SubscriptionCard />
+      <SignUpCard />
 
       <div className="mt-4 bg-black border border-gray-700 pt-3 rounded-2xl">
         <h2 className="px-4">What's happening</h2>
@@ -26,7 +26,7 @@ const TrendingSection = () => {
         <p className="px-4 py-3 text-primary cursor-pointer hover:bg-white/5 transition duration-200 rounded-b-2xl">see more</p>
       </div>
 
-      <Suggestions userpfp={'elonpfp.png'} profileName="Elon Musk" userName="elonmusk"/>
+      <Suggestions />
 
       <Copyright /> 
 

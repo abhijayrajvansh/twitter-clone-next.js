@@ -1,13 +1,7 @@
-interface SuggestionsProps {
-  userpfp: string;
-  profileName: string;
-  userName: string;
-}
 
-const Suggestions: React.FC<SuggestionsProps> = ({
-  userpfp,
-  profileName,
-  userName,
+
+const Suggestions = ({
+
 }) => {
   return (
     <div className="mt-4 bg-black border border-gray-700 pt-3 rounded-2xl">
@@ -15,13 +9,13 @@ const Suggestions: React.FC<SuggestionsProps> = ({
       <div className="flex w-full justify-between items-center py-3 cursor-pointer hover:bg-white/5 transition duration-200 px-4">
         <div className="flex gap-3 items-center">
           <img
-            src={`./images/${userpfp}`}
+            src={`/images/sample-pfp.jpeg`}
             alt="userpp"
             className="h-10 w-10 rounded-full"
           />
           <div>
-            <p className="text-md font-bold">{profileName}</p>
-            <p className="text-gray-400">@{userName}</p>
+            <p className="text-md font-bold">abhijay</p>
+            <p className="text-gray-400 text-sm">@rajvanshx</p>
           </div>
         </div>
         <button className=" text-sm font-bold bg-white text-black px-5 py-1.5 rounded-full">

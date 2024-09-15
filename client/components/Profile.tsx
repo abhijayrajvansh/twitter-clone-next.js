@@ -7,7 +7,7 @@ const Profile = () => {
         <div className="flex gap-3">
 
           <Image width={40} height={40} 
-            src="/images/elonpfp.png" alt="userpp" 
+            src="/images/sample-pfp.jpeg" alt="userpp" 
             className="h-10 rounded-full" 
           />
 
