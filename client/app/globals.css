@@ -18,6 +18,9 @@
   .interactiveButton {
     @apply cursor-pointer p-2 rounded-full
   }
+  .onlyDesktop {
+    @apply hidden xl:flex
+  }
 }
 
 
