@@ -1,3 +1,4 @@
 export const queries = `#graphql
-  verifyGoogleToken(token: String!): String
+  generateSignedToken(token: String!): String
+  verifySignedToken(token: String!): User
 `

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { sign } from "jsonwebtoken";
+import { sign, verify } from "jsonwebtoken";
 import { prismaClient } from "../../db";
 import "dotenv/config";
 
@@ -23,8 +23,13 @@ interface GoogleAuthTokenResult {
   typ: string;
 }
 
+interface JwtPayload {
+  id: string;
+  email: string;
+}
+
 const queries = {
-  verifyGoogleToken: async (parent: any, { token }: { token: String }) => {
+  generateSignedToken: async (parent: any, { token }: { token: String }) => {
     const googleOauthAPI_URL = `https://oauth2.googleapis.com/tokeninfo?id_token=${token}`;
     const { data } = await axios.get<GoogleAuthTokenResult>(
       googleOauthAPI_URL,
@@ -50,7 +55,7 @@ const queries = {
       existingUser = newUser;
     }
 
-    const userPayload = {
+    const userPayload: JwtPayload = {
       id: existingUser.id,
       email: existingUser.email,
     };
@@ -58,6 +63,15 @@ const queries = {
     const signedToken = sign(userPayload, process.env.AUTH_SECRET) 
     return signedToken;
   },
+
+  verifySignedToken: async (parent: any, {token}: {token: string}) => {
+    const decode = verify(token, process.env.AUTH_SECRET)
+    
+    if (typeof decode === 'string' || !decode) return null;
+    
+    const user = await prismaClient.user.findUnique({ where: { id: decode.id }});
+    return user;
+  }
 };
 
 export const resolvers = { queries };
