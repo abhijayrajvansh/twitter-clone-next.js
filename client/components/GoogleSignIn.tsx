@@ -1,23 +1,31 @@
 "use client";
 
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
-import { useCallback } from "react";
-import { useQuery } from "@apollo/client";
+import { useCallback, useEffect } from "react";
+import { useLazyQuery } from "@apollo/client";
 import { generateSignedToken } from "@/graphql/queries";
 
 const GoogleSignIn = () => {
-  const handleLoginWithGoogle = useCallback((cred: CredentialResponse) => {
-    const token = cred.credential;
-    // to use useLazyQuery instead of useQuery
-    const { data } = useQuery(generateSignedToken, { variables: { token } });
-    console.log({data})
-  }, []);
+  const [fetchedSignedToken, { data }] = useLazyQuery(generateSignedToken);
+
+  const handleGoogleSignIn = useCallback ((cred: CredentialResponse) => {
+      fetchedSignedToken({ variables: { token: cred.credential } });
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (data) {
+      console.log("Data received:", data);
+    }
+  }, [data]); 
 
   return (
     <div className="w-full flex justify-center bg-white rounded-md">
-      <GoogleLogin onSuccess={handleLoginWithGoogle} />
+      <GoogleLogin onSuccess={handleGoogleSignIn} />
     </div>
   );
 };
 
 export default GoogleSignIn;
+
