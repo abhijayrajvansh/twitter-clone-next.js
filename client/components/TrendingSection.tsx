@@ -9,6 +9,7 @@ const TrendingSection = () => {
   return (
     <section className="hidden lg:flex flex-col w-[385px] h-full px-4 -top-[300px] border-l border-gray-700">
       <SearchComponent />
+      
       <SignUpCard />
 
       <div className="mt-4 bg-black border border-gray-700 pt-3 rounded-2xl">

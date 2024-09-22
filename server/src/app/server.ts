@@ -7,7 +7,16 @@ import cors from "cors";
 export async function initGraphqlServer() {
   const app = express();
   app.use(express.json());
+
+  // for fixing CORS: Cross-Origin Resource Sharing
   app.use(cors());
+
+  // for fixing COOP: Cross Origin Open Policy -> window.postMessage error
+  app.use((req, res, next) => {
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+    next();
+  });
 
   const graphqlServer = new ApolloServer({
     typeDefs: `

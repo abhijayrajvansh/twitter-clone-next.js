@@ -1,31 +1,27 @@
 "use client";
 
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
-import { useCallback, useEffect } from "react";
-import { useLazyQuery } from "@apollo/client";
+import { gqlClient } from "@/graphql";
 import { generateSignedToken } from "@/graphql/queries";
 
 const GoogleSignIn = () => {
-  const [fetchedSignedToken, { data }] = useLazyQuery(generateSignedToken);
+  const handleGoogleSignIn = async (cred: CredentialResponse) => {
+    
+    const response = await gqlClient.query({
+      query: generateSignedToken,
+      variables: {
+        token: cred.credential,
+      },
+    });
 
-  const handleGoogleSignIn = useCallback ((cred: CredentialResponse) => {
-      fetchedSignedToken({ variables: { token: cred.credential } });
-    },
-    []
-  );
-
-  useEffect(() => {
-    if (data) {
-      console.log("Data received:", data);
-    }
-  }, [data]); 
+    console.log(response)
+  };
 
   return (
     <div className="w-full flex justify-center bg-white rounded-md">
-      <GoogleLogin onSuccess={handleGoogleSignIn} />
+      <GoogleLogin onSuccess={(cred) => handleGoogleSignIn(cred)} />
     </div>
   );
 };
 
 export default GoogleSignIn;
-
