@@ -6,15 +6,6 @@ import { generateSignedToken } from "@/graphql/queries";
 
 const GoogleSignIn = () => {
   const handleGoogleSignIn = async (cred: CredentialResponse) => {
-    
-    const response = await gqlClient.query({
-      query: generateSignedToken,
-      variables: {
-        token: cred.credential,
-      },
-    });
-
-    console.log("generated token response:", response)
     console.log(cred)
   };
 
