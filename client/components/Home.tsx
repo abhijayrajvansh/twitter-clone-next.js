@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div className="flex items-center h-screen xl:hidden text-center">
-        hey, this doesn't support smaller screens,<br />please open it on a desktop.
+        hey, this doesn't support smaller screens,<br />kindly open it on a desktop.
       </div>
       <div className="layoutContainer onlyDesktop">
         <NavigationBar />
