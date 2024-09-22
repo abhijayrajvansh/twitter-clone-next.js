@@ -14,8 +14,8 @@ const GoogleSignIn = () => {
       },
     });
 
-    console.log(response)
-    console.log(cred.credential)
+    console.log("generated token response:", response)
+    console.log(cred)
   };
 
   return (
