@@ -24,11 +24,21 @@ export async function initGraphqlServer() {
   });
 
   await graphqlServer.start();
-  app.use("/graphql", expressMiddleware(graphqlServer, {
+
+  app.get("/", (req, res) => {
+    return res.json({
+      graphql_studio: "/graphql",
+      status: 200
+    });
+  });
+
+  app.use(
+    "/graphql",
+    expressMiddleware(graphqlServer, {
       context: async ({ req }) => {
         return {
-          email: 'sample@email.com'
-        }
+          email: "sample@email.com",
+        };
       },
     })
   );
