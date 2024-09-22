@@ -12,11 +12,11 @@ export async function initGraphqlServer() {
   app.use(cors());
 
   // for fixing COOP: Cross Origin Open Policy -> window.postMessage error
-  app.use((req, res, next) => {
-    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
-    next();
-  });
+  // app.use((req, res, next) => {
+  //   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  //   res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+  //   next();
+  // });
 
   const graphqlServer = new ApolloServer({
     typeDefs: `
