@@ -19,7 +19,7 @@ const GoogleSignIn = () => {
   };
 
   return (
-    <div className="w-full flex justify-center bg-white rounded-md">
+    <div className="w-full flex justify-center">
       <GoogleLogin onSuccess={(cred) => handleGoogleSignIn(cred)} />
     </div>
   );
