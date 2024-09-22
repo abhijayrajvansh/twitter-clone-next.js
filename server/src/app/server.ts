@@ -12,11 +12,11 @@ export async function initGraphqlServer() {
   app.use(cors());
 
   // for fixing COOP: Cross Origin Open Policy -> window.postMessage error
-  // app.use((req, res, next) => {
-  //   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-  //   res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
-  //   next();
-  // });
+  app.use((req, res, next) => {
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+    next();
+  });
 
   const graphqlServer = new ApolloServer({
     typeDefs: `
@@ -36,7 +36,8 @@ export async function initGraphqlServer() {
 
   app.get("/", (req, res) => {
     return res.json({
-      graphql_studio: "/graphql",
+      graphql_playground: "/graphql",
+      graphql_sandbox_alternative: "https://studio.apollographql.com/sandbox/explorer/",
       status: 200
     });
   });
