@@ -15,6 +15,7 @@ const GoogleSignIn = () => {
     });
 
     console.log(response)
+    console.log(cred.credential)
   };
 
   return (
