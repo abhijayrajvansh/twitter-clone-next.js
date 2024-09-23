@@ -11,9 +11,9 @@ const GoogleSignIn = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <GoogleLogin onSuccess={(cred) => handleGoogleSignIn(cred)} />
+      <GoogleLogin theme="outline" size="large" width={310} onSuccess={(cred) => handleGoogleSignIn(cred)} />
     </div>
   );
-};
+}; 
 
 export default GoogleSignIn;
